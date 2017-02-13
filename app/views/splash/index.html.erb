@@ -1,0 +1,82 @@
+<section class="lightimage">
+  <div class="container">
+    <div class="row">
+      <div class="inner-column">
+        <h1>Big Fat Title</h1>
+        <p class="info">Great descriptive content</p>
+        <%= link_to "Call to Action", root_url, class: "btn btn-primary btn-lg" %>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="colored primary" id="about">
+  <div class="container">
+    <div class="row">
+      <div class="inner-column">
+        <h2>Question I'm about to answer?</h2>
+        <p>Why yes, this is the answer.  And it goes on for a bit.  And it goes on for a bit.  And it goes on for a bit.  And it goes on for a bit.  And it goes on for a bit.  And it goes on for a bit.  And it goes on for a bit.  And it goes on for a bit.  And it goes on for a bit.  And it goes on for a bit.  And it goes on for a bit.  And it goes on for a bit.  And it goes on for a bit.  And it goes on for a bit.</p>
+        <%= link_to "Another call to action", root_url, class: "btn btn-primary-inverted btn-lg" %>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="features" id="features">
+  <div class="container">
+    <div class="row">
+      <div class="inner-block">
+        <%= image_tag "https://s3.amazonaws.com/assets.happyfuncorp.com/splash-assets/pic1.jpg", class: "img-responsive" %>
+        <h4>SPROUTS</h4>
+        <p>It was a humorously perilous business for both of us. For, before we proceed further, it must be said that the monkey-rope was fast at both ends; fast to Queequeg's broad canvas belt, and fast to my narrow leather one.</p>
+      </div>
+      <div class="inner-block">
+        <%= image_tag "https://s3.amazonaws.com/assets.happyfuncorp.com/splash-assets/pic2.jpg", class: "img-responsive" %>
+        <h4>COUNTER CULTURE</h4>
+        <p>It was a humorously perilous business for both of us. For, before we proceed further, it must be said that the monkey-rope was fast at both ends; fast to Queequeg's broad canvas belt, and fast to my narrow leather one.</p>
+      </div>
+      <div class="inner-block">
+        <%= image_tag "https://s3.amazonaws.com/assets.happyfuncorp.com/splash-assets/pic3.jpg", class: "img-responsive" %>
+        <h4>BIKE SANDWICH</h4>
+        <p>It was a humorously perilous business for both of us. For, before we proceed further, it must be said that the monkey-rope was fast at both ends; fast to Queequeg's broad canvas belt, and fast to my narrow leather one. </p>
+      </div>
+      <div class="inner-block">
+        <%= image_tag "https://s3.amazonaws.com/assets.happyfuncorp.com/splash-assets/pic2.jpg", class: "img-responsive" %>
+        <h4>COUNTER CULTURE</h4>
+        <p>It was a humorously perilous business for both of us. For, before we proceed further, it must be said that the monkey-rope was fast at both ends; fast to Queequeg's broad canvas belt, and fast to my narrow leather one.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="images">
+  <div class="quarter-block">
+    <%= image_tag "https://scontent-lga3-1.cdninstagram.com/t51.2885-15/e35/12237401_1672681199644836_991083135_n.jpg" %>
+  </div>
+  <div class="quarter-block">
+    <%= image_tag "https://scontent-lga3-1.cdninstagram.com/t51.2885-15/e35/12716797_1679687052302598_977732638_n.jpg" %>
+  </div>
+  <div class="quarter-block">
+    <%= image_tag "https://scontent-lga3-1.cdninstagram.com/t51.2885-15/e35/12107643_1510048632656460_2102141939_n.jpg" %>
+  </div>
+  <div class="quarter-block">
+    <%= image_tag "https://scontent-lga3-1.cdninstagram.com/t51.2885-15/e35/12237446_1702630963356665_284108057_n.jpg" %>
+  </div>
+</section>
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="inner-column">
+        <h1>Stay connected for announcements and releases.</h1>
+        <%= form_tag splash_signup_path, role: :form, remote: true do %>
+          <div class="form-group">
+            <div class="input-group">
+              <%= text_field_tag :signup_email, "", class: "form-control", placeholder: 'E-Mail', type: "email" %>
+              <span class="input-group-btn">
+                <%= submit_tag 'Sign up', class: 'btn btn-primary' %>
+              </span>
+            </div>
+          </div>
+          <small id="signup-message"></small>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>

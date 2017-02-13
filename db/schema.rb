@@ -10,7 +10,78 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170209150200) do
+ActiveRecord::Schema.define(version: 20170212175530) do
+
+  create_table "children", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "gender"
+    t.date     "birthdate"
+    t.datetime "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "locations", force: :cascade do |t|
+    t.integer  "partner_id"
+    t.boolean  "primary_location"
+    t.string   "street1"
+    t.string   "street2"
+    t.string   "country"
+    t.string   "province"
+    t.string   "city"
+    t.string   "neighborhood"
+    t.string   "postcode"
+    t.string   "phone"
+    t.integer  "total_bookings"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  create_table "partners", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "name"
+    t.string   "phone"
+    t.integer  "booking_rate"
+    t.integer  "account_balance"
+    t.integer  "total_bookings"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "plans", force: :cascade do |t|
+    t.integer  "session_limit"
+    t.string   "description"
+    t.string   "name"
+    t.string   "interval"
+    t.string   "currency"
+    t.integer  "amount"
+    t.string   "stripe_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  create_table "sessions", force: :cascade do |t|
+    t.integer  "location_id"
+    t.string   "start_time"
+    t.string   "end_time"
+    t.datetime "date"
+    t.string   "ages"
+    t.string   "activity"
+    t.string   "title"
+    t.string   "description"
+    t.integer  "available_spots"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "subscriptions", force: :cascade do |t|
+    t.integer  "quantity"
+    t.integer  "plan_id"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: ""
@@ -25,6 +96,17 @@ ActiveRecord::Schema.define(version: 20170209150200) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "stripe_id"
+    t.string   "postcode"
+    t.string   "phone"
+    t.string   "primary_city"
+    t.string   "street1"
+    t.string   "street2"
+    t.string   "city"
+    t.string   "province"
+    t.integer  "drop_in_credits"
     t.index ["email"], name: "index_users_on_email"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

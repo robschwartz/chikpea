@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :children
+  resources :sessions
+  resources :partners
+  resources :locations
   devise_for :users, :controllers => { omniauth_callbacks: 'omniauth_callbacks', registrations: 'registrations',  }
   post '/signup' => 'splash#signup', as: :splash_signup
   get '/splash' => 'splash#index'

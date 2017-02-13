@@ -1,7 +1,19 @@
+# t.string   "email",
+# t.string   "first_name"
+# t.string   "last_name"
+# t.string   "stripe_id"
+# t.string   "postcode"
+# t.string   "phone"
+# t.string   "primary_city"
+# t.string   "street1"
+# t.string   "street2"
+# t.string   "city"
+# t.string   "province"
+# t.integer  "drop_in_credits"
 class User < ApplicationRecord
   attr_accessor :oauth_callback
   attr_accessor :current_password
-    
+
   validates_presence_of   :email, if: :email_required?
   validates_uniqueness_of :email, allow_blank: true, if: :email_changed?
   validates_format_of     :email, with: Devise.email_regexp, allow_blank: true, if: :email_changed?
@@ -19,6 +31,8 @@ class User < ApplicationRecord
     @oauth_callback != true
   end
   has_many :identities, dependent: :destroy
+  has_many :children
+  has_many :subscriptions
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :omniauthable, :database_authenticatable, :registerable,
