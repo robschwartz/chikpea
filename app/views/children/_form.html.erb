@@ -1,4 +1,4 @@
-<%= form_for(child) do |f| %>
+<%= simple_form_for(child) do |f| %>
   <% if child.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(child.errors.count, "error") %> prohibited this child from being saved:</h2>
@@ -10,33 +10,14 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :first_name %>
-    <%= f.text_field :first_name %>
+  <div class="form-inputs">
+    <%= f.input :first_name %>
+    <%= f.input :last_name %>
+    <%= f.input :gender %>
+    <%= f.input :birthdate %>
+    <%#= f.input :user_id, hidden: true %>
   </div>
-
-  <div class="field">
-    <%= f.label :last_name %>
-    <%= f.text_field :last_name %>
-  </div>
-
-  <div class="field">
-    <%= f.label :gender %>
-    <%= f.text_field :gender %>
-  </div>
-
-  <div class="field">
-    <%= f.label :birthdate %>
-    <%= f.date_select :birthdate %>
-  </div>
-
-  <div class="field">
-    <%= f.label :user_id %>
-    <%= f.datetime_select :user_id %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-actions">
+    <%= f.button :submit %>
   </div>
 <% end %>
