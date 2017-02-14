@@ -5,5 +5,5 @@
 # t.datetime "user_id"
 class Child < ApplicationRecord
   belongs_to :user
-  has_many :sessions
+  has_many :events
 end

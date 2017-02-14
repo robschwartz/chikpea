@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
+  resources :events
   resources :children
-  resources :sessions
   resources :partners
   resources :locations
   devise_for :users, :controllers => { omniauth_callbacks: 'omniauth_callbacks', registrations: 'registrations',  }

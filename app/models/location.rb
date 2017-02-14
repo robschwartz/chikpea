@@ -12,5 +12,5 @@
 
 class Location < ApplicationRecord
   belongs_to :partner
-  has_many :sessions
+  has_many :events
 end

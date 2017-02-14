@@ -1,0 +1,30 @@
+.container
+  .page-header
+    = link_to events_path, :class => 'btn btn-default' do
+      %span.glyphicon.glyphicon-list-alt
+      Back
+    = link_to edit_event_path(@event), :class => 'btn btn-primary' do
+      %span.glyphicon.glyphicon-pencil
+      Edit
+    %h1 Show event
+
+  %dl.dl-horizontal
+    %dt Location:
+    %dd= @event.location_id
+    %dt Start time:
+    %dd= @event.start_time
+    %dt End time:
+    %dd= @event.end_time
+    %dt Date:
+    %dd= @event.date
+    %dt Ages group:
+    %dd= @event.ages_group
+    %dt Activity:
+    %dd= @event.activity
+    %dt Title:
+    %dd= @event.title
+    %dt Description:
+    %dd= @event.description
+    %dt Open spots:
+    %dd= @event.open_spots
+

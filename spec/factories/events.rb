@@ -1,13 +1,13 @@
 FactoryGirl.define do
-  factory :session do
+  factory :event do
     location_id 1
     start_time "MyString"
     end_time "MyString"
-    date "2017-02-13 08:35:23"
-    ages "MyString"
+    date "2017-02-14 07:12:50"
+    ages_group "MyString"
     activity "MyString"
     title "MyString"
     description "MyString"
-    available_spots 1
+    open_spots 1
   end
 end
