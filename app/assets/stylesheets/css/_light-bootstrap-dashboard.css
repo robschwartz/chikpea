@@ -1,17 +1,17 @@
 /*!
-    
+
  =========================================================
  * Light Bootstrap Dashboard - v1.3.1.0
  =========================================================
- 
+
  * Product Page: http://www.creative-tim.com/product/light-bootstrap-dashboard
  * Copyright 2017 Creative Tim (http://www.creative-tim.com)
  * Licensed under MIT (https://github.com/creativetimofficial/light-bootstrap-dashboard/blob/master/LICENSE.md)
- 
+
  =========================================================
- 
+
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
- 
+
  */
 
 /*      light colors         */
@@ -270,7 +270,6 @@ input:focus {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .sidebar .logo .simple-text {
-  text-transform: uppercase;
   padding: 5px 0px;
   display: block;
   font-size: 18px;
@@ -342,7 +341,6 @@ body > .navbar-collapse .logo p {
 }
 .sidebar .logo .simple-text,
 body > .navbar-collapse .logo .simple-text {
-  text-transform: uppercase;
   padding: 5px 0px;
   display: block;
   font-size: 18px;

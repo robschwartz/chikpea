@@ -22,3 +22,6 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+Dashboard options: https://www.creative-tim.com/product/light-bootstrap-dashboard
