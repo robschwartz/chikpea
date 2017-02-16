@@ -1,5 +1,5 @@
- 
- 
+
+
 class LocationsController < ApplicationController
   before_action :set_location, only: [:show, :edit, :update, :destroy]
 
@@ -7,42 +7,41 @@ class LocationsController < ApplicationController
 
   def index
     @locations = Location.all
-  end 
+  end
 
   def show
-  end 
+  end
 
-  def new 
+  def new
     @location = Location.new
-  end 
+  end
 
   def edit
-  end 
+  end
 
   def create
     @location = Location.new(location_params)
     @location.save
     respond_with(@location)
-  end 
+  end
 
   def update
     @location.update(location_params)
     flash[:notice] = 'Location was successfully updated.'
     respond_with(@location)
-  end 
+  end
 
   def destroy
     @location.destroy
     redirect_to locations_url, notice: 'Location was successfully destroyed.'
-  end 
+  end
 
   private
     def set_location
       @location = Location.find(params[:id])
-    end 
+    end
 
     def location_params
-      params[:location] 
-    end 
+      params.require(:location).permit(:partner_id,:primary_location,:street1,:street2,:country,:province,:city,:neighborhood,:postcode,:phone,:total_bookings)
+    end
 end
- 

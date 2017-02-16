@@ -6,12 +6,11 @@
       <%= render 'sidebar' %>
       <div class="main-panel">
         <%= render 'navbar' %>
-
         <%= render 'chromeframe' %>
-        <%= render 'header' %>
+        <%#= render 'header' %>
         <%= render 'flashes' %>
         <%= yield %>
-        <%#= render 'footer' %>
+        <%= render 'footer' %>
         <%# Javascript at the bottom for fast page loading %>
         <%= render 'javascripts' %>
       </div>

@@ -1,17 +1,46 @@
-<%= form_for(location) do |f| %>
-  <% if location.errors.any? %>
+<%= form_for(@location, class: 'small-3 columns') do |f| %>
+  <% if @location.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(location.errors.count, "error") %> prohibited this location from being saved:</h2>
-
+      <h2><%= pluralize(@location.errors.count, "error") %> prohibited this location from being saved:</h2>
       <ul>
-      <% location.errors.full_messages.each do |message| %>
+      <% @location.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <fieldset class="form-group">
+    <%= f.label :street1 %>
+    <%= f.text_field :street1, autofocus: true, class: "form-control" %>
+  </fieldset>
+  <fieldset class="form-group">
+    <%= f.label :street2 %>
+    <%= f.text_field :street2, class: "form-control" %>
+  </fieldset>
+  <fieldset class="form-group">
+    <%= f.label :country %>
+    <%= f.text_field :country, autofocus: true, class: "form-control" %>
+  </fieldset>
+  <fieldset class="form-group">
+    <%= f.label :province %>
+    <%= f.text_field :province, autocomplete: "off", class: "form-control" %>
+  </fieldset>
+  <fieldset class="form-group">
+    <%= f.label :city %>
+    <%= f.text_field :city, class: "form-control" %>
+  </fieldset>
+  <fieldset class="form-group">
+    <%= f.label :neighborhood %>
+    <%= f.text_field :neighborhood, class: "form-control" %>
+  </fieldset>
+  <fieldset class="form-group">
+    <%= f.label :postcode %>
+    <%= f.text_field :postcode, class: "form-control" %>
+  </fieldset>
+  <fieldset class="form-group">
+    <%= f.label :phone %>
+    <%= f.text_field :phone, class: "form-control" %>
+  </fieldset>
+  <button type="submit" class="btn btn-info btn-fill pull-right">Add Location</button>
+  <div class="clearfix"></div>
 <% end %>
