@@ -5,6 +5,6 @@
 # t.integer  "account_balance"
 # t.integer  "total_bookings"
 class Partner < ApplicationRecord
-  belongs_to :user
+  has_many :users
   has_many :locations
 end

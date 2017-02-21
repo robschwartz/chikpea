@@ -10,6 +10,7 @@
 # t.string   "city"
 # t.string   "province"
 # t.integer  "drop_in_credits"
+# t.integer  "partner_id"
 class User < ApplicationRecord
   attr_accessor :oauth_callback
   attr_accessor :current_password
@@ -33,6 +34,10 @@ class User < ApplicationRecord
   has_many :identities, dependent: :destroy
   has_many :children
   has_many :subscriptions
+  belongs_to :partner
+
+  accepts_nested_attributes_for :partner
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :omniauthable, :database_authenticatable, :registerable,

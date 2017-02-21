@@ -6,6 +6,9 @@
           <div class="panel-body">
             <%= f.error_notification %>
             <div class="form-inputs">
+              <%= f.fields_for :partner do |p| %>
+                  <%= p.input :name, autofocus: true, placeholder: "Company Name", required: true, label: "Company Name", class:'form-group' %>
+              <%end%>
               <%= f.input :email, required: true, autofocus: true %>
               <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
             </div>

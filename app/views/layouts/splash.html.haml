@@ -19,7 +19,6 @@
 
   %body.splash#top{ data: { spy: "scroll", target: "#navbar"} }
     = render 'chromeframe'
-    = render 'flashes'
 
     %header.slideup.affix-top{ data: { spy: "affix", "offset-top": 10 } }
       = navbar id: "navbar", fluid: true, position: :top, padding: 0 do
@@ -30,7 +29,10 @@
             = link_to "About", "#about"
             = link_to "Features", "#features"
             = link_to "Contact", "#contact"
-
+            - if current_user
+              = link_to "Sign Out", destroy_user_session_path, :method=> :delete
+            - else
+              = link_to "Sign Up", new_user_registration_path
     = yield
 
 
