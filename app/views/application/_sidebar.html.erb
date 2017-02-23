@@ -18,11 +18,17 @@
                 </a>
             </li>
             <li class="active">
+              <% if @biz_user %>
                 <a href="user.html">
-                    <i class="pe-7s-user"></i>
-                    <p>Schedule</p>
-                    <!-- <p>Locations</p> -->
+                  <i class="pe-7s-user"></i>
+                  <p>Locations</p>
                 </a>
+              <% else %>
+                <a href="user.html">
+                  <i class="pe-7s-user"></i>
+                  <p>Schedule</p>
+                </a>
+              <% end %>
             </li>
             <li>
                 <a href="table.html">
