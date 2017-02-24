@@ -15,6 +15,14 @@ class User < ApplicationRecord
   attr_accessor :oauth_callback
   attr_accessor :current_password
 
+  belongs_to :partner, required: false
+
+  has_many :identities, dependent: :destroy
+  has_many :children
+  has_many :subscriptions
+
+  accepts_nested_attributes_for :partner
+
   validates_presence_of   :email, if: :email_required?
   validates_uniqueness_of :email, allow_blank: true, if: :email_changed?
   validates_format_of     :email, with: Devise.email_regexp, allow_blank: true, if: :email_changed?
@@ -31,12 +39,6 @@ class User < ApplicationRecord
   def email_required?
     @oauth_callback != true
   end
-  has_many :identities, dependent: :destroy
-  has_many :children
-  has_many :subscriptions
-  belongs_to :partner
-
-  accepts_nested_attributes_for :partner
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

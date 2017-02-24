@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+ruby '2.2.6'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
@@ -57,7 +58,6 @@ end
 gem 'rails_12factor'
 gem 'haml-rails'
 group :development, :test do
-  gem 'sqlite3'
   gem 'rspec', '~> 3.5.0'
   gem 'rspec-rails', '~> 3.5.0'
   gem 'factory_girl_rails'
@@ -84,10 +84,10 @@ group :test do
 end
 
 group :production do
-  gem 'pg'
   gem 'lograge'
 end
 
+gem 'pg'
 gem 'bootstrap-sass'
 gem 'modernizr-rails'
 gem 'meta-tags', require: 'meta_tags'
