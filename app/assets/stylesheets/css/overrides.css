@@ -9,3 +9,13 @@
   height:60px;
   background-color: white;
 }*/
+
+@media (min-width: 1200px) {
+  .container {
+     width: 970px;
+  }
+}
+
+.col-md-offset-3, .profile.center {
+   margin-left: 2%; 
+}

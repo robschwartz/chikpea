@@ -1,6 +1,13 @@
-<h1>Editing Location</h1>
 
-<%= render 'form', location: @location %>
-
-<%= link_to 'Show', @location %> |
-<%= link_to 'Back', locations_path %>
+<div class="container col-md-6 col-md-offset-3">
+  <div class="page-header">
+    <%= link_to locations_path, :class => 'btn btn-default' do %>
+      <span class="pe-7s-back"></span>
+      Back
+    <% end %>
+    <h1>Edit Location</h1>
+  </div>
+  <%= render 'form', location: @location %>
+  <%= link_to 'Show', @location %> |
+  <%= link_to 'Back', locations_path %>
+</div>

@@ -17,9 +17,9 @@
                     <p>Dashboard</p>
                 </a>
             </li>
-            <li class="active">
+            <li>
               <% if @biz_user %>
-                <a href="user.html">
+                <a href="/locations">
                   <i class="pe-7s-user"></i>
                   <p>Locations</p>
                 </a>
@@ -31,11 +31,17 @@
               <% end %>
             </li>
             <li>
-                <a href="table.html">
-                    <i class="pe-7s-note2"></i>
-                    <p>Kiddos</p>
-                    <!-- <p>Classes</p> -->
+              <% if @biz_user %>
+                <a href="/events">
+                  <i class="pe-7s-note2"></i>
+                  <p>Events</p>
                 </a>
+              <% else %>
+                <a href="table.html">
+                  <i class="pe-7s-note2"></i>
+                  <p>Kiddos</p>
+                </a>
+              <% end %>
             </li>
             <li>
                 <a href="typography.html">
