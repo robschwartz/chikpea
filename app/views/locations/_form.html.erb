@@ -65,5 +65,5 @@
   <!-- add partner id to the location -->
   <%= f.hidden_field :partner_id, :value => @biz.id %>
 
-  <button type="submit" class="btn btn-info btn-fill pull-right">Add Location</button>
+  <button type="submit" class="btn btn-info btn-fill pull-right"><% if @location.created_at %>Edit Location<% else %>Add Location<% end %></button>
 <% end %>
