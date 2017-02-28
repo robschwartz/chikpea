@@ -12,10 +12,17 @@
 
         <ul class="nav">
             <li>
-                <a href="dashboard.html">
+              <% if @biz_user %>
+                <a href="/schedule">
                     <i class="pe-7s-graph"></i>
                     <p>Dashboard</p>
                 </a>
+              <% else %>
+                <a href="dashboard.html">
+                    <i class="pe-7s-home"></i>
+                    <p>Home</p>
+                </a>
+              <% end %>
             </li>
             <li>
               <% if @biz_user %>
@@ -51,17 +58,22 @@
             </li>
             <li>
                 <a href="icons.html">
-                    <i class="pe-7s-science"></i>
+                    <i class="pe-7s-shopbag"></i>
                     <p>Store</p>
                 </a>
             </li>
             <li>
                 <a href="maps.html">
-                    <i class="pe-7s-map-marker"></i>
+                    <i class="pe-7s-comment"></i>
                     <p>Blog</p>
                 </a>
             </li>
-            <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+            <li>
+              <a rel="nofollow" data-method="delete" href="/users/sign_out">
+                <i class="pe-7s-power"></i>
+                <p>Log Out</p>
+              </a>
+            </li>
         </ul>
   </div>
 </div>
