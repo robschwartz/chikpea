@@ -992,7 +992,7 @@ body > .navbar-collapse[data-color="purple"]:after {
   top: 50%;
   margin-top: -15px;
 }
-.alert button.close {
+/*.alert button.close {
   position: absolute;
   right: 10px;
   top: 50%;
@@ -1009,7 +1009,7 @@ body > .navbar-collapse[data-color="purple"]:after {
   text-align: center;
   padding: 3px;
   font-weight: 300;
-}
+}*/
 .alert button.close:hover {
   opacity: .55;
 }
