@@ -10,47 +10,7 @@
     </div>
   <% end %>
   <div class="row">
-    <div class="col-md-7">
-      <fieldset class="form-group">
-        <%= f.label :location_id %>
-        <%= f.text_field :location_id, autofocus: true, class: "form-control" %>
-      </fieldset>
-    </div>
-    <div class="col-md-5">
-      <fieldset class="form-group">
-        <%= f.label :start_time %>
-        <%= f.text_field :start_time, class: "form-control" %>
-      </fieldset>
-    </div>
-  </div>
-  <div class="row">
     <div class="col-md-4">
-      <fieldset class="form-group">
-        <%= f.label :end_time %>
-        <%= f.text_field :end_time, autocomplete: "off", class: "form-control" %>
-      </fieldset>
-    </div>
-    <div class="col-md-4">
-      <fieldset class="form-group">
-        <%= f.label :date %>
-        <%= f.text_field :date, class: "form-control" %>
-      </fieldset>
-    </div>
-    <div class="col-md-4">
-      <fieldset class="form-group">
-        <%= f.label :ages_group %>
-        <%= f.text_field :ages_group, class: "form-control" %>
-      </fieldset>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-3">
-      <fieldset class="form-group">
-        <%= f.label :activity %>
-        <%= f.text_field :activity, class: "form-control" %>
-      </fieldset>
-    </div>
-    <div class="col-md-3">
       <fieldset class="form-group">
         <%= f.label :title %>
         <%= f.text_field :title, class: "form-control" %>
@@ -58,14 +18,57 @@
     </div>
     <div class="col-md-3">
       <fieldset class="form-group">
-        <%= f.label :description %>
-        <%= f.text_field :description, class: "form-control" %>
+        <%= f.label :activity %>
+        <%= f.text_field :activity, class: "form-control" %>
+      </fieldset>
+    </div>
+    <div class="col-md-5">
+      <fieldset class="form-group">
+        <%= f.label :location_id %>
+        <%= f.select :location_id, options_for_select(@biz_locations), autofocus: true, class: "form-control" %>
+      </fieldset>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <fieldset class="form-group">
+        <%= f.label :start_time %>
+        <%= f.text_field :start_time, class: "form-control" %>
+      </fieldset>
+    </div>
+    <div class="col-md-3">
+      <fieldset class="form-group">
+        <%= f.label :end_time %>
+        <%= f.text_field :end_time, autocomplete: "off", class: "form-control" %>
+      </fieldset>
+    </div>
+    <div class="col-md-3">
+      <fieldset class="form-group">
+        <%= f.label :date %>
+        <%= f.text_field :date, class: "form-control" %>
+      </fieldset>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <fieldset class="form-group">
+        <%= f.label :ages_group %>
+        <%= f.text_field :ages_group, class: "form-control" %>
       </fieldset>
     </div>
     <div class="col-md-3">
       <fieldset class="form-group">
         <%= f.label :open_spots %>
-        <%= f.text_field :open_spots, class: "form-control" %>
+        <%= f.number_field :open_spots, class: "form-control", min:0 %>
+      </fieldset>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <fieldset class="form-group">
+        <%= f.label :description %>
+        <%= f.text_area :description, class: "form-control" %>
       </fieldset>
     </div>
   </div>

@@ -12,6 +12,9 @@ class EventsController < ApplicationController
 
   def new
     @event = Event.new
+    @biz_locations = Location.where(partner_id: @biz.id)
+
+    @biz_locations = @biz_locations.map {|x| x.street1}
   end
 
   def edit
