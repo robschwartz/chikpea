@@ -34,7 +34,7 @@
                   <%= Location.find(event.location_id).street1 %>
                 </td>
                 <td>
-                  <%= event.date %>
+                  <%= event.date.strftime('%d/%m/%Y') %>
                 </td>
                 <td>
                   <%= event.start_time %>
