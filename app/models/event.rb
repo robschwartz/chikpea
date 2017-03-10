@@ -10,4 +10,19 @@
 class Event < ApplicationRecord
   has_many :children
   belongs_to :location
+
+  before_save :normalize_date, :normalize_start_time, :normalize_end_time
+
+
+  def normalize_date
+
+  end
+
+  def normalize_start_time
+
+  end
+
+  def normalize_end_time
+
+  end
 end

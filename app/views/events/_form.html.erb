@@ -25,28 +25,27 @@
     <div class="col-md-5">
       <fieldset class="form-group">
         <%= f.label :location_id %>
-        <%= f.select :location_id, options_for_select(@biz_locations), autofocus: true, class: "form-control" %>
+        <%= f.select :location_id, options_for_select(@biz_locations),{}, { :class => 'form-control' } %>
       </fieldset>
     </div>
-
   </div>
   <div class="row">
     <div class="col-md-3">
       <fieldset class="form-group">
         <%= f.label :start_time %>
-        <%= f.text_field :start_time, class: "form-control" %>
+        <%= f.time_field :start_time, class: "form-control" %>
       </fieldset>
     </div>
     <div class="col-md-3">
       <fieldset class="form-group">
         <%= f.label :end_time %>
-        <%= f.text_field :end_time, autocomplete: "off", class: "form-control" %>
+        <%= f.time_field :end_time, autocomplete: "off", class: "form-control" %>
       </fieldset>
     </div>
     <div class="col-md-3">
       <fieldset class="form-group">
         <%= f.label :date %>
-        <%= f.text_field :date, class: "form-control" %>
+        <%= f.date_field :date, class: "form-control" %>
       </fieldset>
     </div>
   </div>
