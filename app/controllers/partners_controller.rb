@@ -1,5 +1,5 @@
- 
- 
+
+
 class PartnersController < ApplicationController
   before_action :set_partner, only: [:show, :edit, :update, :destroy]
 
@@ -7,42 +7,49 @@ class PartnersController < ApplicationController
 
   def index
     @partners = Partner.all
-  end 
+  end
+
+  def dashboard
+    # @current_events
+    # @upcoming_events
+    # @dollars earned
+    # users sent to events
+    # top 3 locations
+  end
 
   def show
-  end 
+  end
 
-  def new 
+  def new
     @partner = Partner.new
-  end 
+  end
 
   def edit
-  end 
+  end
 
   def create
     @partner = Partner.new(partner_params)
     @partner.save
     respond_with(@partner)
-  end 
+  end
 
   def update
     @partner.update(partner_params)
     flash[:notice] = 'Partner was successfully updated.'
     respond_with(@partner)
-  end 
+  end
 
   def destroy
     @partner.destroy
     redirect_to partners_url, notice: 'Partner was successfully destroyed.'
-  end 
+  end
 
   private
     def set_partner
       @partner = Partner.find(params[:id])
-    end 
+    end
 
     def partner_params
-      params[:partner] 
-    end 
+      params[:partner]
+    end
 end
- 

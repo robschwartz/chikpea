@@ -15,4 +15,7 @@ Rails.application.routes.draw do
 
   # main page for logged in users
   get '/schedule' => 'events#index'
+
+  # main page for logged in businesses
+  get '/dashboard' => 'partners#dashboard'
 end
