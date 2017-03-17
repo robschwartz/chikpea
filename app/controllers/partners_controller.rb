@@ -10,11 +10,11 @@ class PartnersController < ApplicationController
   end
 
   def dashboard
-    # @current_events
-    # @upcoming_events
+    # @current_classes
     # @dollars earned
-    # users sent to events
     # top 3 locations
+    # top 3 classes
+    # 10 best customers/ kids
   end
 
   def show
