@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :children
   resources :partners
   resources :locations
+
   devise_for :users, :controllers => { omniauth_callbacks: 'omniauth_callbacks', registrations: 'registrations', sessions: 'sessions'}
   post '/signup' => 'splash#signup', as: :splash_signup
   get '/splash' => 'splash#index'
@@ -18,4 +19,8 @@ Rails.application.routes.draw do
 
   # main page for logged in businesses
   get '/dashboard' => 'partners#dashboard'
+
+  resource :user, only: [:edit, :update] do
+
+  end
 end

@@ -25,3 +25,10 @@
     bottom: 10px;
     width: 100%;
 }
+
+.cancel-account {
+  width: 75%
+}
+.profile.large_panel {
+  float: none;
+}
