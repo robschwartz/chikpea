@@ -32,3 +32,6 @@
 .profile.large_panel {
   float: none;
 }
+.footer-title{
+  text-align: center !important;
+}

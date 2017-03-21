@@ -6,8 +6,12 @@ Rails.application.routes.draw do
 
   devise_for :users, :controllers => { omniauth_callbacks: 'omniauth_callbacks', registrations: 'registrations', sessions: 'sessions'}
   post '/signup' => 'splash#signup', as: :splash_signup
-  get '/splash' => 'splash#index'
+
   root 'splash#index'
+
+  get '/splash' => 'splash#index'
+  get '/info/partners' => 'splash#partners_info'
+
   get '/setup' => 'setup#index'
 
   devise_scope :user do

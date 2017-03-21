@@ -4,6 +4,9 @@ class SplashController < ApplicationController
   def index
   end
 
+  def partners_info
+  end
+
   def signup
     if ENV['MAILCHIMP_SPLASH_SIGNUP_LIST_ID'].blank? or ENV['MAILCHIMP_API_KEY'].blank?
 

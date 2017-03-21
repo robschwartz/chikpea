@@ -14,3 +14,6 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require light-bootstrap-dashboard
+//= require bootstrap
+//= require gaia
+//= require modernizr
